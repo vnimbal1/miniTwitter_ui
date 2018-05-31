@@ -1,0 +1,140 @@
+<div class="col-lg-12">
+  <div class="thumbnail" style="background-color: tomato">
+    <div class="text-center">
+      <h2>Welcome to Mini Twitter Application</h2>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> An endpoint to read the message list for the current user (as identified by their HTTP Basic authentication
+          credentials). Include messages they have sent and messages sent by users they follow. Support a “search=”
+          parameter that can be used to further filter messages based on keyword.
+        </b>
+      </a>
+      <hr>
+      http://localhost:8080/people/messages
+      <hr>
+      http://localhost:8080/people/messages?search=keyword
+      <hr>
+      Messages are ordered by user id
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b>Endpoint to get the list of people the user is following</b>
+      </a>
+      <hr>
+      http://localhost:8080/people/following
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b>Endpoint to get the list of followers of the user</b>
+      </a>
+      <hr>
+      http://localhost:8080/people/followers
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> An endpoint to start following another user</b>
+      </a>
+      <hr>
+      http://localhost:8080/people/follow/ userId
+      <hr>
+      <b>Note:</b> userId of user to be followed
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> An endpoint to unfollow another user</b>
+      </a>
+      <hr>
+      http://localhost:8080/people/unfollow/ userId
+      <hr>
+      <b>Note:</b> userId of user to be unfollowed
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail" style="background-color: tomato">
+    <div class="text-center">
+      <h2>Additional functionality</h2>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> 1. An endpoint that returns the current user's "shortest distance" to some other user. The shortest distance
+          is defined as the number of hops needed to reach a user through the users you are following (not through your
+          followers; direction matters). For example, if you follow user B, your shortest distance to B is 1. If you do
+          not follow user B, but you do follow user C who follows user B, your shortest distance to B is 2.
+        </b></a>
+      <hr>
+      http://localhost:8080/people/distance/ userId
+      <hr>
+      <a href="http://localhost:8080/people/distance/10" target="_blank">Distance to User 10 from current user</a>
+      <hr>
+      <b>Note:</b> userId of user for which we need to find distance<br>
+      Distance of -1 indicates no connection<br>
+      In target is same as user that is logged in then distance is 0
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> 2. An endpoint that returns a list of all users, paired with their most "popular" follower. The more
+          followers someone has, the more "popular" they are. Hint: this is possible to do with a single SQL query!
+        </b></a>
+      <hr>
+      http://localhost:8080/people/popular
+      <hr>
+      <a href="http://localhost:8080/people/popular/" target="_blank">Check it out</a>
+      <hr>
+      <b>Note:</b> Returns key value pair of User and Most popular follower
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-lg-12">
+  <div class="thumbnail">
+    <div class="caption">
+      <a style="color:  crimson">
+        <b> 3. Write a small web interface for your API in JavaScript. Don't use server-side templates (like JSPs).
+          Instead, write a single-page application that interacts with your API via AJAX calls. Feel free to use any
+          modern JavaScript frameworks (e.g., AngularJS, ReactJS, etc.)
+        </b></a>
+      <hr>
+      Still in a learning phase when it comes to front-end part. But its fun. Lot of scope for improvement :-)
+    </div>
+  </div>
+</div>
